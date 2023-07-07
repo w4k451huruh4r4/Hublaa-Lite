@@ -22,7 +22,6 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 ));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-
 $result = curl_exec($curl);
 if($result) {
 $decode = json_decode($result, true);
