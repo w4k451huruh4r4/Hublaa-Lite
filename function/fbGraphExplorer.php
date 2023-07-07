@@ -1,5 +1,5 @@
 <?php 
-function FBapi($method, $url, $data) {
+function FBapi($url, $method, $data) {
 $curl = curl_init();
 switch ($method) {
 case "POST":
