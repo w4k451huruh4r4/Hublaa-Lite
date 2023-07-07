@@ -1,5 +1,5 @@
 <?php 
-function fbGraphExplorer($method, $url, $data) {
+function FBapi($method, $url, $data) {
 $curl = curl_init();
 switch ($method) {
 case "POST":
