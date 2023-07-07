@@ -31,7 +31,7 @@ echo json_encode($error,JSON_PRETTY_PRINT);
 } elseif(empty($_GET['password'])) {
 $error = array("error_code"=>100,"error_msg"=>"The parameter password is required (100)");
 echo json_encode($error,JSON_PRETTY_PRINT);
-} elseif(strlen($_GET['email']) < 4 || strlen($_GET['password']) < 6 ) {
+} elseif(strlen($_GET['email']) < 4 || strlen($_GET['email']) > 50 || strlen($_GET['password']) < 6 ) {
 $error = array("error_code"=>100,"error_msg"=>"Invalid email or password (100)");
 echo json_encode($error,JSON_PRETTY_PRINT);
 } else {
