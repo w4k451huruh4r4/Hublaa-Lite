@@ -25,10 +25,10 @@ curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 $result = curl_exec($curl);
 if($result) {
 $decode = json_decode($result, true);
-return json_encode($decode,JSON_PRETTY_PRINT);
+return json_encode($decode, JSON_PRETTY_PRINT);
 } else {
-$error = array("error_code"=>1000,"error_msg"=>"Unable to connect Facebook server (1000)");
-return json_encode($error,JSON_PRETTY_PRINT);
+$error = array("error_code"=>1000, "error_msg"=>"Hublaa unable to connect Facebook server (1000)");
+return json_encode($error, JSON_PRETTY_PRINT);
 }
 curl_close($curl);
 }
