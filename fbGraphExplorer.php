@@ -14,7 +14,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 break;
 default:
 if ($data)
-$url = sprintf("%s?%s", $url, http_build_query($data));
+$url = sprintf("%s?%s", "https://graph.facebook.com".$url, http_build_query($data));
 }
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array(
