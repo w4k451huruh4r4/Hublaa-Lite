@@ -1,5 +1,5 @@
 <?php 
-function FBapi($url, $method, $data) {
+function HublaaAPI($url, $method, $data) {
 $curl = curl_init();
 switch ($method) {
 case "POST":
