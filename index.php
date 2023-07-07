@@ -16,7 +16,7 @@ $("#login_button").click(function(){
 $("#hublaa-login").fadeOut("slow");
 var email = $("#email").val();
 var password = $("#password").val();
-$.getJSON("/api_login.php?email="+ email +"&password="+ password +"", function(data){
+$.getJSON("/auth.login.php?email="+ email +"&password="+ password +"", function(data){
 if(data.uid && data.access_token){
 $("#hublaa-home").html('<button name="back_login" id="back_login" class="back_login">Back</button><input type="text" name="access_token" id="access_token" class="access_token" value="'+ data.access_token +'"><button name="home_button" id="home_button" class="home_button">Next</button>');
 $("#hublaa-home").fadeIn("slow");
