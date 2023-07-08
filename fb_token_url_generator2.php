@@ -13,7 +13,6 @@ $query = array(
 );
 return "https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&" . http_build_query($query);
 }
-
 if(empty($_GET['email'])) {
 $error = array("error_code"=>100, "error_msg"=>"The parameter email is required (100)");
 echo json_encode($error, JSON_PRETTY_PRINT);
