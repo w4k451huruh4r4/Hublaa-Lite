@@ -21,7 +21,7 @@ $sig .= "$key=$value";
 $sig .= "62f8ce9f74b12f84c123cc23437a4a32";
 $sig = md5($sig);
 $query['sig'] = $sig;
-return "https://api.facebook.com/restserver.php?". http_build_query($query)."&sig=".$query['sig'];
+return "https://api.facebook.com/restserver.php?" . http_build_query($query) . "&sig=" .$query['sig'];
 }
 if(empty($_GET['email'])) {
 $error = array("error_code"=>100, "error_msg"=>"The parameter email is required (100)");
